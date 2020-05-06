@@ -1,0 +1,11 @@
+program = deck*: \n? boarddef \n [action+ \s]*
+deck = cardname;\n?
+action = command position+; \n?
+command = symbols+
+boarddef = "playerslots" number "maxhand" number 
+value = string|number
+string = \"symbols*\"
+position = ["hand"|"slot"]\.['0'-'9']+
+cardname = symbols+
+number = ['0'-'9']+
+symbols = ['A'-'Z''0'-'9']+
